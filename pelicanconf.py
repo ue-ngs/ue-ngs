@@ -1,6 +1,6 @@
 AUTHOR = "UE長崎"
 SITENAME = "UE長崎"
-SITEURL = ""
+SITEURL = "https://ue-ngs.sion908.tech"
 
 PATH = "content"
 STATIC_PATHS = ["images"]

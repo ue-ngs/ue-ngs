@@ -7,7 +7,7 @@ __pycache__/
 .venv/
 
 # Pelican output (generated)
-# output/
+output/
 
 # OS
 .DS_Store
