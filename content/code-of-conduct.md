@@ -92,4 +92,4 @@ UE長崎は、会場内のみならずオンライン上においても、他の
 - [ベルリン行動規範](https://berlincodeofconduct.org/ja/)
 - [Selenium Conference Tokyo](https://conf.selenium.jp/code-of-conduct_jp.html)
 - [TokyoGirls.rb](https://gist.github.com/JunichiIto/7a080f1cfb0ae27ef600c14b94a02db7)
-- [JaSST](https://www.jasst.jp/code-of-conduct_jp.html)
+- [JaSST](https://jasst.jp/code-of-conduct/)
