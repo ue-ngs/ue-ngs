@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}過去のイベント | UE長崎{% endblock %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{{ SITEURL }}/theme/css/events.css" />
+{% endblock %}
+
+{% block content %}
+  <div class="events-page">
+    <header class="events-header">
+      <a class="back-link" href="{{ SITEURL }}/">← UE長崎</a>
+      <h1>Events</h1>
+      <p class="events-subtitle">過去のイベント記録</p>
+    </header>
+
+    <main class="events-grid">
+      {% for article in articles %}
+      <a class="event-card-link" href="{{ SITEURL }}/{{ article.url }}">
+        <article class="event-card">
+          {% if article.thumbnail %}
+          <div class="event-thumb">
+            <img src="{{ SITEURL }}/{{ article.thumbnail }}" alt="{{ article.title }}" loading="lazy" />
+          </div>
+          {% else %}
+          <div class="event-thumb event-thumb--placeholder"></div>
+          {% endif %}
+          <div class="event-info">
+            <time>{{ article.date.strftime('%Y.%m.%d') }}</time>
+            <h2>{{ article.title }}</h2>
+            {% if article.summary %}
+            <p>{{ article.summary }}</p>
+            {% endif %}
+          </div>
+        </article>
+      </a>
+      {% else %}
+      <p class="no-events">イベント記録はまだありません。</p>
+      {% endfor %}
+    </main>
+  </div>
+{% endblock %}

@@ -1,0 +1,18 @@
+[project]
+name = "ue-nagasaki"
+version = "0.1.0"
+description = "UE長崎 — Unreal Engine コミュニティ 長崎 公式サイト"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "markdown>=3.10.2",
+    "pelican>=4.11.0.post0",
+    "pelican-sitemap",
+    "pelican-related-posts",
+    "pelican-embed-microblog",
+    "pelican-neighbors",
+    "minchin.pelican.plugins.summary",
+]
+
+[project.scripts]
+build-events = "build:main"

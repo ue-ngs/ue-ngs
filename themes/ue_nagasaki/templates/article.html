@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}{{ article.title }} | UE長崎{% endblock %}
+{% block description %}{{ article.summary if article.summary else article.title }}{% endblock %}
+{% block og_title %}{{ article.title }} | UE長崎{% endblock %}
+{% block og_description %}{{ article.summary if article.summary else article.title }}{% endblock %}
+{% block og_url %}{{ article.url }}{% endblock %}
+{% if article.thumbnail %}{% block og_image %}{{ article.thumbnail }}{% endblock %}{% endif %}
+{% block tw_title %}{{ article.title }} | UE長崎{% endblock %}
+{% block tw_description %}{{ article.summary if article.summary else article.title }}{% endblock %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{{ SITEURL }}/theme/css/events.css" />
+{% endblock %}
+
+{% block content %}
+  <div class="article-page">
+    <header class="article-header">
+      <a class="back-link" href="{{ SITEURL }}/events/">← イベント一覧</a>
+      <time>{{ article.date.strftime('%Y.%m.%d') }}</time>
+      {% if article.eventstatus == 'report' %}
+      <span class="status-badge status-badge--report">開催済み</span>
+      {% endif %}
+      <h1>{{ article.title }}</h1>
+    </header>
+
+    {% if article.thumbnail %}
+    <div class="article-thumb">
+      <img src="{{ SITEURL }}/{{ article.thumbnail }}" alt="{{ article.title }}" />
+    </div>
+    {% endif %}
+
+    <div class="article-body">
+      {{ article.content }}
+    </div>
+
+    {% if article.connpass %}
+    <div class="article-cta">
+      <a href="{{ article.connpass }}" target="_blank" rel="noopener" class="connpass-btn">
+        connpassで詳細を見る ↗
+      </a>
+    </div>
+    {% endif %}
+  </div>
+{% endblock %}
