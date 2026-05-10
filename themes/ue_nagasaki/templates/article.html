@@ -5,7 +5,10 @@
 {% block og_title %}{{ article.title }} | UE長崎{% endblock %}
 {% block og_description %}{{ article.summary if article.summary else article.title }}{% endblock %}
 {% block og_url %}{{ article.url }}{% endblock %}
-{% if article.thumbnail %}{% block og_image %}{{ article.thumbnail }}{% endblock %}{% endif %}
+{% if article.thumbnail %}
+{% block og_image %}{{ article.thumbnail }}{% endblock %}
+{% block tw_image %}{{ article.thumbnail }}{% endblock %}
+{% endif %}
 {% block tw_title %}{{ article.title }} | UE長崎{% endblock %}
 {% block tw_description %}{{ article.summary if article.summary else article.title }}{% endblock %}
 
