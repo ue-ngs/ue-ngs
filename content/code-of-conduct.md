@@ -2,6 +2,7 @@ Title: UE長崎 イベント行動規範
 Date: 2025-05-10
 Slug: code-of-conduct
 Save_as: code-of-conduct/index.html
+Summary: UE長崎イベントの行動規範。すべての参加者が安心・安全な体験をできる環境を提供するための規範です。
 
 # UE長崎 イベント行動規範
 
